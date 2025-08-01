@@ -102,7 +102,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: anwartamasna/test:frontend-v6
+        image: anwartamasna/test:frontend-v7
         imagePullPolicy: Always
         ports:
         - containerPort: 80
