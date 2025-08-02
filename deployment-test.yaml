@@ -107,9 +107,6 @@ spec:
         ports:
         - containerPort: 80
           name: http
-        env:
-        - name: REACT_APP_BACKEND_URL
-          value: "/api"  # Relative path - uses ingress routing
         resources:
           requests:
             memory: "64Mi"
@@ -187,14 +184,6 @@ spec:
   rules:
   - host: test.imadzajli.xyz
     http:
-      paths:
-      - path: /api
-        pathType: Prefix
-        backend:
-          service:
-            name: backend-service
-            port:
-              number: 3001
       - path: /
         pathType: Prefix
         backend:
